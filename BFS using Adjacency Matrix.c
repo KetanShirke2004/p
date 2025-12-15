@@ -4,19 +4,19 @@ int adj[10][10], visited[10];
 int queue[10], front = 0, rear = -1;
 int n;
 
-/* Enqueue */
+/* Enqueue operation */
 void enqueue(int x) {
     queue[++rear] = x;
 }
 
-/* Dequeue */
+/* Dequeue operation */
 int dequeue() {
     return queue[front++];
 }
 
-/* BFS function */
+/* BFS traversal */
 void BFS(int start) {
-    int i, v;
+    int v, i;
 
     visited[start] = 1;
     enqueue(start);
